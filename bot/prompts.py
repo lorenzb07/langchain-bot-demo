@@ -1,4 +1,5 @@
-REACT_PROMPT_TEMPLATE = """Answer the following questions as best you can. Today is {today}. 
+REACT_PROMPT_TEMPLATE = """Answer the following questions as best you can. Answer in the user's language.
+Today is {today}.
 
 You have access to the following tools:
 
@@ -21,18 +22,14 @@ Question: {input}
 Thought:{agent_scratchpad}
 """
 
-REACT_CHAT_PROMPT_TEMPLATE = """Assistant is a large language model.
-
-Assistant is designed to be able to assist with a wide range of tasks, from answering simple questions to providing in-depth explanations and discussions on a wide range of topics. As a language model, Assistant is able to generate human-like text based on the input it receives, allowing it to engage in natural-sounding conversations and provide responses that are coherent and relevant to the topic at hand.
-
-Assistant is constantly learning and improving, and its capabilities are constantly evolving. It is able to process and understand large amounts of text, and can use this knowledge to provide accurate and informative responses to a wide range of questions. Additionally, Assistant is able to generate its own text based on the input it receives, allowing it to engage in discussions and provide explanations and descriptions on a wide range of topics.
-
-Overall, Assistant is a powerful tool that can help with a wide range of tasks and provide valuable insights and information on a wide range of topics. Whether you need help with a specific question or just want to have a conversation about a particular topic, Assistant is here to assist.
+# from: https://smith.langchain.com/hub/langchain-ai/react-agent-template
+REACT_CHAT_PROMPT_TEMPLATE = """Answer the following questions as best you can. Answer in the user's language.
+Today is {today}.
 
 TOOLS:
 ------
 
-Assistant has access to the following tools:
+You have access to the following tools:
 
 {tools}
 

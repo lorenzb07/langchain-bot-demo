@@ -43,6 +43,8 @@ def init_agent(
         tools=tools,
         verbose=False,
         handle_parsing_errors=True,
+        max_execution_time=90,
+        max_iterations=3,
     )
 
 

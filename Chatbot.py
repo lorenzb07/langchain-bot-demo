@@ -1,4 +1,5 @@
 import os
+from datetime import datetime
 
 import streamlit as st
 from langchain_community.callbacks.streamlit import StreamlitCallbackHandler
@@ -19,7 +20,7 @@ st.caption("A simple chatbot")
 # Initialize the session state for messages if not already present
 if "messages" not in st.session_state:
     st.session_state["messages"] = [
-        {"role": "assistant", "content": "Hello! How can I help you?"}
+        # {"role": "assistant", "content": "Hello! How can I help you?"}
     ]
 
 # Display all messages in the session state
@@ -38,7 +39,7 @@ if prompt := st.chat_input():
         # Initialize the Streamlit callback handler
         st_callback = StreamlitCallbackHandler(
             st.container(),
-            expand_new_thoughts=False,
+            expand_new_thoughts=True,
         )
 
         # Get the agent executor for the Azure OpenAI service
@@ -50,6 +51,7 @@ if prompt := st.chat_input():
         response = agent_executor.invoke(
             {
                 "input": prompt,
+                "today": datetime.now().strftime("%Y-%m-%d"),
                 "chat_history": st.session_state.messages,
             },
             {

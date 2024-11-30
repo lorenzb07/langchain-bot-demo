@@ -59,5 +59,5 @@ The supported providers are:
 To run the _Streamlit_ application, run the following command:
 
 ```bash
-streamlit run Chatbot.py
+streamlit run chatbot.py
 ```

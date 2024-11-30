@@ -37,12 +37,16 @@ langchain-core==0.3.15
 langchain-groq==0.2.1
 langchain-openai==0.2.6
 langchain-text-splitters==0.3.2
+langgraph==0.2.53
+langgraph-checkpoint==2.0.7
+langgraph-sdk==0.1.40
 langsmith==0.1.140
 markdown-it-py==3.0.0
 MarkupSafe==3.0.2
 marshmallow==3.23.1
 mccabe==0.7.0
 mdurl==0.1.2
+msgpack==1.1.0
 multidict==6.1.0
 mypy-extensions==1.0.0
 narwhals==1.14.1

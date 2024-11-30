@@ -1,6 +1,6 @@
 import sys
 
-from bot.agents import init_agent, run_agent
+from bot.langgraph_agents import init_langgraph_agent, stream_langgraph_agent
 
 
 def main():
@@ -20,9 +20,9 @@ def main():
     question = sys.argv[3]
 
     if question != "":
-        agent_executor = init_agent(provider, model_name)
+        agent_executor = init_langgraph_agent(provider, model_name)
 
-        answer = run_agent(
+        answer = stream_langgraph_agent(
             agent_executor=agent_executor,
             question=question,
         )

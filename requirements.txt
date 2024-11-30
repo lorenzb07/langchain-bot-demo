@@ -5,3 +5,5 @@ langchain_openai
 openai
 duckduckgo-search
 langchain_groq
+streamlit
+langgraph
